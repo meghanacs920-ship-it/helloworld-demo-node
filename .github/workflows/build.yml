@@ -62,9 +62,9 @@ jobs:
       # Deploy Kubernetes Resources
       - name: Deploy to Amazon EKS
         run: |
-          kubectl apply -f deployment.yaml
-          kubectl apply -f service.yaml
-          kubectl apply -f ingress.yaml
+          kubectl apply -f terraform/deployment.yaml
+          kubectl apply -f terraform/service.yaml
+          kubectl apply -f terraform/ingress.yaml
 
       # Verify Deployment
       - name: Verify Deployment
